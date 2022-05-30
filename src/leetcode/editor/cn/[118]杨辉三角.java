@@ -31,46 +31,23 @@ package leetcode.editor.cn;
 // 
 // Related Topics 数组 动态规划 👍 686 👎 0
 
-import java.util.ArrayList;
 import java.util.List;
 
 class PascalsTriangle{
     public static void main(String[] args) {
 
-        Solution solution = new PascalsTriangle().new Solution();
-        int num = 5;
-        solution.generate(5);
+//        Solution solution = new PascalsTriangle().new Solution();
+
+
+//        solution.generate();
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public List<List<Integer>> generate(int numRows) {
-//        int[][] rows = new int[numRows][];
-        List<List<Integer>> rows = new ArrayList<>();
-
-        List<Integer> l1 = new ArrayList<>();
-        l1.add(1);
-        rows.add(l1);
-        for (int i = 1; i < numRows; i++) {
-            ArrayList<Integer> l = new ArrayList<>();
-            for (int j = 0; j < i + 1; j++) {
-                l.add(getC(rows.get(i - 1), j));
-            }
-            rows.add(l);
-        }
-        return rows;
-    }
-
-    private int getC(List<Integer> l, int index){
-        if(index <= 0 || index >= l.size() )return 1;
-        return l.get(index - 1) + l.get(index);
-    }
-    private int getC(int[] nums, int index){
-        if(index <= 0 || index >= nums.length )return 1;
-        int sum = nums[index - 1] + nums[index];
-        return sum;
-    }
-}
+//class Solution {
+//    public List<List<Integer>> generate(int numRows) {
+//
+//    }
+//}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
