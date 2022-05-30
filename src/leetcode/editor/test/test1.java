@@ -22,7 +22,16 @@ public class test1 {
             e.printStackTrace();
         }
 
-
+    }
+    public int percentageLetter(String s, char letter) {
+        if(s == null || s.length() == 0) return 0;
+        int len = s.length();
+        int chi = 0;
+        for(int i = 0; i< len; i++){
+            if(letter == (s.charAt(i)))
+                chi++;
+        }
+        return chi / len;
     }
 
 }
